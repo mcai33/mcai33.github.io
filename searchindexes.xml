@@ -1,1 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search/>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>First</title><url>/post/first/</url><categories/><tags/><content type="html"><![CDATA[安装 直接使用github下 release 二进制文件 hugo_extend 即可，解压后配置环境变量PATH到该路径，即可在CMD或者powershell中使用了，如下说明配置ok
+生成站点 预览 hugo server 是一个空的站点，没有任何页面
+创建about页面 hugo new about.md 在contentx下生成了about.md，内容如下
+--- title: &#34;About&#34; date: 2023-06-08T11:53:57+08:00 draft: true --- 创建第一个文章 创建一个杂项类下的first.md，将本次使用hugo部署blog系统记录在该文档里
+hugo new post/first.md 选择并安装皮肤 使用 next皮肤 ，
+获取皮肤
+git clone https://github.com/hugo-next/hugo-theme-next.git themes/hugo-theme-next.git 先备份hugo默认配置hugo.toml使用next皮肤example的配置(yaml格式)
+mv hugo.toml hugo.toml.bak cp themes/hugo-theme-next/exampleSite/config.yaml hugo.yaml 输入 hugo server 预览，
+发现皮肤更换了，但是依旧没有页面；原因是 markdown文件下draft属性要改为false，表示修改为发布版本
+部署 生成public部署页面 将about.md和misc/fisrt.md的draft均改为false，以便生成部署页面
+hugo -b &#34;http://mcai33.github.io&#34; 更新pages仓库 cd public git init git remote add origin https://github.com/mcai33/mcai33.github.io.git git add -A git commit -m &#34;first commit&#34; git push -u origin main 访问部署页面 参考 Hugo中文文档 (gohugo.org) hugo-next/hugo-theme-next: Easily &amp; powerful theme for Hugo engine. (github.com) 博客站点升级使用 Hugo NexT 最新主题 - 热爱生活与梦想 (lisenhui.cn) ]]></content></entry><entry><title>About</title><url>/about/</url><categories/><tags/><content type="html">a simple about page</content></entry></search>
