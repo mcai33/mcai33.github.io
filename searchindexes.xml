@@ -8,4 +8,7 @@ git clone https://github.com/hugo-next/hugo-theme-next.git themes/hugo-theme-nex
 mv hugo.toml hugo.toml.bak cp themes/hugo-theme-next/exampleSite/config.yaml hugo.yaml 输入 hugo server 预览，
 发现皮肤更换了，但是依旧没有页面；原因是 markdown文件下draft属性要改为false，表示修改为发布版本
 部署 生成public部署页面 将about.md和misc/fisrt.md的draft均改为false，以便生成部署页面
-hugo -b &#34;http://mcai33.github.io&#34; 更新pages仓库 cd public git init git remote add origin https://github.com/mcai33/mcai33.github.io.git git add -A git commit -m &#34;first commit&#34; git push -u origin main 访问部署页面 参考 Hugo中文文档 (gohugo.org) hugo-next/hugo-theme-next: Easily &amp; powerful theme for Hugo engine. (github.com) 博客站点升级使用 Hugo NexT 最新主题 - 热爱生活与梦想 (lisenhui.cn) ]]></content></entry><entry><title>About</title><url>/about/</url><categories/><tags/><content type="html">a simple about page</content></entry></search>
+hugo -b &#34;http://mcai33.github.io&#34; 更新pages仓库 cd public git init git remote add origin https://github.com/mcai33/mcai33.github.io.git git add -A git commit -m &#34;first commit&#34; git push -u origin main 访问部署页面 浏览器输入https://mcai33.github.io/ 访问部署后的页面，github pages更新有一点滞后
+更新部署页面 如果需要修改部署内容，只需要修改contents下的markdown文件后执行下hugo指令即可更新public下的部署页面。
+然后就是正常git push即可
+参考 Hugo中文文档 (gohugo.org) hugo-next/hugo-theme-next: Easily &amp; powerful theme for Hugo engine. (github.com) 博客站点升级使用 Hugo NexT 最新主题 - 热爱生活与梦想 (lisenhui.cn) ]]></content></entry><entry><title>About</title><url>/about/</url><categories/><tags/><content type="html">a simple about page</content></entry></search>
